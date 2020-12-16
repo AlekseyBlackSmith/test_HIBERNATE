@@ -23,7 +23,7 @@ public class UserDaoJDBCImpl implements UserDao {
         String createTable = "CREATE TABLE IF NOT EXISTS Users " +
                 "(id INT NOT NULL AUTO_INCREMENT, " +
                 "name VARCHAR (45) NOT NULL, " +
-                "last_name VARCHAR (45) NOT NULL, " +
+                "lastName VARCHAR (45) NOT NULL, " +
                 "age INT NOT NULL, " +
                 "PRIMARY KEY (id));";
 
@@ -50,7 +50,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void saveUser(String name, String lastName, byte age) {
-        String saveUser = "INSERT INTO users (name, last_name, age) VALUES ('"+name+"', '"+lastName+"', '"+age+"');";
+        String saveUser = "INSERT INTO users (name, lastName, age) VALUES ('"+name+"', '"+lastName+"', '"+age+"');";
 
         try(Statement statement = connection.createStatement()) {
             statement.executeUpdate(saveUser);
