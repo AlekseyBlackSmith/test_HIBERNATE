@@ -2,13 +2,14 @@ package jm.task.core.jdbc.model;
 
 import jm.task.core.jdbc.service.UserServiceImpl;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@Entity
 @Table
 public class User extends UserServiceImpl {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // дописал для уникальности ключа
     private Long id;
 
     @Column
@@ -19,6 +20,8 @@ public class User extends UserServiceImpl {
 
     @Column
     private Byte age;
+
+    public User(){} //создал для Hibernate
 
     public User(String name) {
 
