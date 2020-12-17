@@ -16,13 +16,21 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void createUsersTable() {
+//        String createTable;
+//
+//        Session session = null;
+//        try{
+//            session = FactoryUtil.getSessionFactory().openSession();
+//            Transaction tx = (Transaction) session.beginTransaction();
+//            session.createSQLQuery(createTable).executeUpdate();
+//        }
 
     }
 
-    @Override
-    public void dropUsersTable() {
-        Session session = 
-    }
+//    @Override
+//    public void dropUsersTable() {
+//        Session session =
+//    }
 
     @Override
     public void saveUser(String name, String lastName, byte age) {
