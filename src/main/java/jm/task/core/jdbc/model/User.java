@@ -1,12 +1,10 @@
 package jm.task.core.jdbc.model;
 
-import jm.task.core.jdbc.service.UserServiceImpl;
-
 import javax.persistence.*;
 
 @Entity
-@Table
-public class User extends UserServiceImpl {
+@Table(name = "users")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // дописал для уникальности ключа
